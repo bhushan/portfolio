@@ -1,0 +1,26 @@
+html {
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 3px; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #2b6cb0;
+}
+
+.nuxt-link-exact-active {
+  font-weight: 700;
+}
+
+:root {
+  --text-default-color: #2a4365;
+}
+
+.avatar-sm {
+  background-image: url('~assets/images/profile/avatar-sm.jpeg');
+}

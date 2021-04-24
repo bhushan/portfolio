@@ -4,12 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
+    "serve": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:style": "stylelint **/*.{vue,css} --ignore-path .gitignore",
-    "lint": "yarn lint:js && yarn lint:style"
+    "lint": "yarn lint:js && yarn lint:style",
+    "lint:fix": "npm run lint:js -- --fix && npm run lint:style -- --fix"
   },
   "dependencies": {
     "@nuxt/content": "^1.8.1",

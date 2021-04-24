@@ -11,20 +11,29 @@ export default {
   },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [],
+  css: [
+    '~/assets/css/app.css',
+  ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
-  components: true,
+  components: false,
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module',
+    // Doc: https://go.nuxtjs.dev/eslint
+    [
+      '@nuxtjs/eslint-module',
+      {
+        fix: true,
+      },
+    ],
+
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
   ],
@@ -33,8 +42,10 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
   ],
@@ -47,4 +58,4 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {},
-}
+};
