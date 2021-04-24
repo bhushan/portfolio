@@ -1,10 +1,12 @@
 <template>
   <nav class="flex justify-between items-center mb-16">
     <div>
-      <a
-        href="/"
+      <nuxt-link
+        :to="{ path: '/' }"
         class="font-black tracking-widest text-xl"
-      >bhushang.dev</a>
+      >
+        RB
+      </nuxt-link>
     </div>
     <div class="uppercase text-sm tracking-tight text-blue-900">
       <nuxt-link :to="{ path: '/' }">
