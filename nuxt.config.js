@@ -31,23 +31,42 @@ export default {
       },
     ],
 
+    // https://go.nuxtjs.dev/pwa
+    '@nuxtjs/pwa',
+
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+
+    // Doc: https://github.com/juliomrqz/nuxt-optimized-images
+    '@aceforth/nuxt-optimized-images',
 
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
   ],
 
+  // Doc: https://github.com/juliomrqz/nuxt-optimized-images
+  optimizedImages: {
+    inlineImageLimit: 1000,
+    imagesName: ({ isDev }) => isDev ? '[path][name][hash:optimized].[ext]' : 'img/[contenthash:7].[ext]',
+    handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
+    optimizeImages: true,
+    optimizeImagesInDev: false,
+    defaultImageLoader: 'img-loader',
+    mozjpeg: {
+      quality: 80,
+    },
+    optipng: {
+      optimizationLevel: 3,
+    },
+  },
+
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
+    // '@nuxtjs/axios',
 
     // https://go.nuxtjs.dev/content
-    '@nuxt/content',
+    // '@nuxt/content',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)

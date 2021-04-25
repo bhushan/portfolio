@@ -22,7 +22,7 @@
     </div>
     <div class="w-full lg:w-2/5">
       <img
-        src="~/assets/images/profile/avatar.jpeg"
+        src="~/assets/images/profile/avatar.jpg"
         class="rounded-none lg:rounded-lg shadow-2xl hidden lg:block"
       />
     </div>
