@@ -31,6 +31,10 @@ export default {
     return {
       navbarLinks: [
         {
+          name: 'Home',
+          path: '/',
+        },
+        {
           name: 'Articles',
           path: '/articles',
         },

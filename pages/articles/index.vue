@@ -1,28 +1,30 @@
 <template>
-  <div>
-    <article-title>
-      Som Title
-    </article-title>
-    <article-author />
-    <article-body>
-      article
-    </article-body>
-  </div>
+  <ul>
+    <li
+      v-for="article in articlesList"
+      :key="article.path"
+    >
+      <nuxt-link :to="{ path: article.path }">
+        {{ article.name.toString().toUpperCase() }}
+      </nuxt-link>
+    </li>
+  </ul>
 </template>
 
 <script>
-import ArticleTitle from '@/components/articles/ArticleTitle';
-import ArticleAuthor from '@/components/articles/ArticleAuthor';
-import ArticleBody from '@/components/articles/ArticleBody';
-
 export default {
   name: 'ArticlesList',
   layout: 'article',
-
-  components: {
-    ArticleBody,
-    ArticleTitle,
-    ArticleAuthor,
+  computed: {
+    articlesList () {
+      const prefix = '/articles/';
+      return [
+        {
+          name: 'SOLID Principles',
+          path: prefix + 'solid-principles',
+        },
+      ];
+    },
   },
 };
 </script>
