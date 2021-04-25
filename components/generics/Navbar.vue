@@ -3,7 +3,7 @@
     <div>
       <nuxt-link
         :to="{ path: '/' }"
-        class="font-black tracking-widest text-xl"
+        class="uppercase text-2xl tracking-tight text-blue-900 logo"
       >
         RB
       </nuxt-link>
@@ -19,3 +19,9 @@
     </div>
   </nav>
 </template>
+
+<style scoped>
+.logo {
+  font-weight: 700;
+}
+</style>
